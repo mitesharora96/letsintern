@@ -1,0 +1,63 @@
+<br>
+<br><br><br>
+<h1> this is Main Component</h1>
+
+<div class='row'>
+
+<div class='filters'>
+    <ul class='filterType'>
+        <li>Search by Role
+            <ul class='filterOptions'>
+                <li><input type="radio" [(ngModel)]="Role" name="role1" value="Angular Developer"> 
+                    <label for="role1"> Angular Developer</label></li>
+                <li><input type="radio" [(ngModel)]="Role" name="role2" value="Java Developer"> 
+                    <label for="role2"> Java Developer</label></li>
+                <li><input type="radio" [(ngModel)]="Role" name="role3" value="C++ Developer">
+                    <label for="role3">C++ Developer</label></li>
+                <li><input type="radio" [(ngModel)]="Role" name="role4" value="All">
+                    <label for="role4"> All</label></li>
+            </ul>
+        </li>
+        <li>Search by City
+            <ul class='filterOptions'>
+                <li><input type="radio" [(ngModel)]="City" name="city1" value="Pune">
+                    <label for="city1">  Pune </label></li>
+                <li><input type="radio" [(ngModel)]="City" name="city2" value="Mumbai">
+                    <label for="city2">  Mumbai </label></li>
+                <li> <input type="radio" [(ngModel)]="City" name="city3" value="Delhi">
+                    <label for="city3">  Delhi </label></li>
+                <li> <input type="radio" [(ngModel)]="City" name="city4" value="All">
+                    <label for="city4"> All</label></li>
+            </ul>
+        </li>
+    
+    </ul>
+</div>
+
+
+<div class='InternshipsList'>
+
+<h3>These are the list of internships</h3>
+<ul class="IntList">
+   <ng-container *ngFor="let list of InternshipList">
+    <li *ngIf="City=='All' || list.internship_city==City">
+        <div class="Adds">
+         <h3> {{list.internship_title}}</h3> 
+          {{list.company_name}}  <br>
+          {{list.internship_city}} <br>
+          {{list.paid}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {{"Starts by:"+list.start_date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          {{"Apply by:"+list.apply_endDate}}<br>
+          
+        </div>
+   
+    </li>
+</ng-container>
+</ul>
+
+
+</div>
+
+
+
+</div>

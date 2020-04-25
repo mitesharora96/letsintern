@@ -1,0 +1,28 @@
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar  a {
+    float: left;
+    margin-left: 20px;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 22px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  #li{
+    padding-top: 32px;
+  }
+  .navbar a:hover {
+    
+    color: orange;
+  }
+  
